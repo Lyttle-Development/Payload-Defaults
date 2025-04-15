@@ -1,11 +1,11 @@
 {
   "name": "payload-defaults",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Defaults for Payload project",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm run build"
+    "postinstall": "npm i && npm run build"
   },
   "repository": {
     "type": "git",
