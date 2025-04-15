@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // Modern output
+    "target": "ES2022",
+    // Or "ESNext" if you're using native ESM
+    "module": "CommonJS",
+    // Source files
+    "rootDir": "src",
+    // Output directory
+    "outDir": "dist",
+    // All strict type-checking options
+    "strict": true,
+    // Compatibility with CommonJS modules
+    "esModuleInterop": true,
+    // Avoid casing mismatches
+    "forceConsistentCasingInFileNames": true,
+    // Skip type checking in node_modules
+    "skipLibCheck": true,
+    // Resolve modules like Node.js
+    "moduleResolution": "node",
+    // Allow importing JSON
+    "resolveJsonModule": true,
+    // Emit .d.ts files
+    "declaration": true,
+    // Generate source maps for debugging
+    "sourceMap": true,
+    // Ensures each file can be transpiled separately
+    "isolatedModules": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

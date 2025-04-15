@@ -1,0 +1,29 @@
+{
+  "name": "payload-defaults",
+  "version": "1.0.0",
+  "description": "Defaults for Payload project",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyttle-Development/Payload-Defaults.git"
+  },
+  "keywords": [
+    "Payload"
+  ],
+  "author": "Lyttle Development",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lyttle-Development/Payload-Defaults/issues"
+  },
+  "homepage": "https://github.com/Lyttle-Development/Payload-Defaults#readme",
+  "dependencies": {
+    "payload": "^3.34.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
