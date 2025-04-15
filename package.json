@@ -1,6 +1,6 @@
 {
   "name": "payload-defaults",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Defaults for Payload project",
   "main": "dist/index.js",
   "scripts": {
