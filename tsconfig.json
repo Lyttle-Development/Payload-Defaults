@@ -25,7 +25,13 @@
     // Generate source maps for debugging
     "sourceMap": true,
     // Ensures each file can be transpiled separately
-    "isolatedModules": true
+    "isolatedModules": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "jsx": "react"
   },
   "include": [
     "src/**/*"
