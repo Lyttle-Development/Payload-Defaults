@@ -2,10 +2,10 @@
   "compilerOptions": {
     // Modern output
     "target": "ES2022",
-    // Or "ESNext" if you're using native ESM
-    "module": "CommonJS",
+    // Module
+    "module": "esnext",
     // Source files
-    "rootDir": "src",
+    "rootDir": "../../",
     // Output directory
     "outDir": "dist",
     // All strict type-checking options
@@ -31,10 +31,21 @@
       "DOM.Iterable",
       "ES2022"
     ],
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "@/*": [
+        "../../src/*"
+      ],
+      "@root/*": [
+        "../../*"
+      ],
+      "@payload-defaults/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
-    "src/**/*"
+    "../../**/*"
   ],
   "exclude": [
     "node_modules",
