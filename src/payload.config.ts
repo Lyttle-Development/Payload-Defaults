@@ -8,6 +8,11 @@ export const defaultConfig: DefaultConfig = {
   admin: {
     components: {
       Nav: '@/../libs/payload-defaults/src/components/Navigation',
+      views: {
+        dashboard: {
+          Component: '@/../libs/payload-defaults/src/components/Dashboard',
+        },
+      },
     },
     livePreview: {
       breakpoints: [
