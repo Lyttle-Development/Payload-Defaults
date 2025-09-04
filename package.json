@@ -5,7 +5,14 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm i && npm run build"
+    "postinstall": "npm i && npm run build",
+    "update": "npm update --save && npx npm-check-updates -u && npm install"
+  },
+  "volta": {
+    "node": "22.19.0"
+  },
+  "engines": {
+    "node": "22.19.0"
   },
   "repository": {
     "type": "git",
@@ -21,10 +28,10 @@
   },
   "homepage": "https://github.com/Lyttle-Development/Payload-Defaults#readme",
   "dependencies": {
-    "@payloadcms/ui": "^3.34.0",
-    "payload": "^3.34.0"
+    "@payloadcms/ui": "^3.54.0",
+    "payload": "^3.54.0"
   },
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
