@@ -1,45 +1,63 @@
 @use "~@/styles/variables.scss" as v;
 
 .nav {
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0.5rem;
+  color: v.$color-text;
 
   .logo_link {
-    margin-left: 3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.5rem 1rem;
+    padding: 0.25rem;
+    border-radius: 8px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
   }
 
   .group__title {
-    color: v.$color-text;
-    margin-bottom: .5rem;
-    margin-top: 2rem;
+    color: rgba(v.$color-text, 0.9);
+    margin-bottom: .25rem;
+    margin-top: 0.75rem;
+    padding: 0 0.75rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
 
     &:not(.active) {
-      opacity: .5;
+      opacity: .85;
     }
 
     .heading_link {
       text-decoration: none;
       color: v.$color-text;
-      font-weight: bold;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      display: inline-block;
 
       &.active {
         color: v.$color-primary;
-        font-weight: bold;
-        opacity: 1;
+        background: rgba(108, 99, 255, 0.06);
       }
 
       &:not(.active):hover {
         color: v.$color-primary;
-        font-weight: bold;
-        opacity: .5;
+        opacity: 1;
       }
     }
   }
 
   .list {
-    padding: 0;
+    padding: 0 0.5rem;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
     .list_item {
       list-style: none;
@@ -49,18 +67,52 @@
       .link {
         text-decoration: none;
         color: v.$color-text;
+        padding: 0.6rem 0.75rem;
+        border-radius: 8px;
+        display: block;
+        transition: background 140ms ease, transform 160ms ease, color 140ms ease;
+
+        &:hover {
+          background: rgba(108, 99, 255, 0.06);
+          transform: translateY(-2px);
+        }
 
         &.active {
           color: v.$color-primary;
-          font-weight: bold;
+          background: linear-gradient(90deg, rgba(108, 99, 255, 0.08), rgba(39, 27, 94, 0.03));
+          box-shadow: 0 8px 20px rgba(108, 99, 255, 0.08);
         }
 
         &:not(.active):hover {
           color: v.$color-primary;
-          font-weight: bold;
-          opacity: .5;
         }
       }
+    }
+  }
+}
+
+@media (max-width: v.$breakpoint-medium) {
+  .nav {
+    margin-left: 0;
+    padding: 0.5rem 0.25rem;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+
+    .logo_link {
+      margin-left: 0;
+    }
+
+    .group__title {
+      display: none;
+    }
+
+    .list {
+      flex-direction: row;
+    }
+
+    .list_item .link {
+      white-space: nowrap;
     }
   }
 }
